@@ -2,14 +2,21 @@ use std::io;
 const NUM_OF_ENTRIES: usize = 5;
 
 
+
 fn main() {
+    // Define a string literal to input the instruction
+    let mut s = String::from("Please input list");
+    s.push_str("a");
+    println!("{}", s);
     // Define the length of array using an integer
     let length: f32 = 5.0;
     //Initialize arrays to hold the 5 numbers and enter the arrays
+    println!("{}", s);
     let mut _a: [f32; NUM_OF_ENTRIES] = create_arrays();
+    println!("{}", s);
     let mut _b: [f32; NUM_OF_ENTRIES] = create_arrays();
     // Determine total number of number of entries
-    let total_entries: usize = length*2;
+    let total_entries: f32 = length*2.0;
     // Determine the sum of the array_sum
     let sum_a: f32 = sum(_a);
     let sum_b: f32 = sum(_b);
@@ -22,7 +29,6 @@ fn main() {
 }
 
 fn create_arrays() -> [f32; NUM_OF_ENTRIES] {
-    println!("Please input first list of 5 numbers");
     let mut array_1 = [0.0; NUM_OF_ENTRIES];
     for i in 0..NUM_OF_ENTRIES {
         // Initialize the variable to hold the number
